@@ -5,6 +5,7 @@ import fetch from 'isomorphic-unfetch'
 import config from '../../config'
 import styled from 'styled-components'
 
+
 const StyledDiv = styled.div`
 min-height: 10vh
 `
@@ -20,6 +21,7 @@ const chunkArray = function (arr, chunkSize) {
 const RecommendationsRow = ({ type, columns, rows = 1, page = 1, loadedCallback = (isFinalPage) => {} }) => {
   const [recommendations, setRecommendations] = React.useState([])
   const skeletons = []
+  const chunk = ['d','s']
   for (let i = 0; i < columns; i++) {
     skeletons.push(<VideoLinkSkeleton></VideoLinkSkeleton>)
   }
@@ -39,7 +41,10 @@ const RecommendationsRow = ({ type, columns, rows = 1, page = 1, loadedCallback 
   React.useEffect(() => loadRecommendations(page), [])
 
   return <StyledDiv>
-    {recommendations.length === 0
+    <div>
+      e
+    </div>
+    {/* {recommendations.length === 0
       ? <Row recursive count={columns}>
         {skeletons.map((s, index) => <span key={index}>
           {s}
@@ -57,7 +62,7 @@ const RecommendationsRow = ({ type, columns, rows = 1, page = 1, loadedCallback 
           </span>)}
         </Row>
       )
-    }
+    } */}
   </StyledDiv>
 }
 

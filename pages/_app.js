@@ -7,6 +7,7 @@ import Footer from 'components/Footer'
 import globalCss from 'utilities/global-css'
 import Head from 'next/head'
 import config from '../config.json'
+// import config from '../'
 import { clarity } from 'react-microsoft-clarity'
 class AppWrapper extends App {
   render () {
