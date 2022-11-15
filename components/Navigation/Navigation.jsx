@@ -15,13 +15,13 @@ const StyledLogo = styled.img`
   align-self: flex-start;
   color:${({ theme }) => theme.color.accent};
 `
-const StyledLinkO = styled(Link)`
+const StyledLogoLink = styled(Link)`
 `
 
 const LogoLink = ({href, src}) =>(
-    <StyledLinkO href={href}>
+    <StyledLogoLink href={href}>
       <StyledLogo src={src} />
-    </StyledLinkO>
+    </StyledLogoLink>
 
 )
 
